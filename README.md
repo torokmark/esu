@@ -24,7 +24,7 @@ pip install esu
 ```py
 from esu import Struct
 
-Dog = Struct('Doggy', 
+Dog = Struct('Dog', 
              'name', 'age', 
              methods={
                  'say': lambda self: print("Hello {}".format(self.__dict__['name']))
