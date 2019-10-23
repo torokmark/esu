@@ -2,7 +2,7 @@
 
 
 [![Build Status](https://travis-ci.org/torokmark/esu.svg?branch=master)](https://travis-ci.org/torokmark/esu)
-[![Documentation Status](https://readthedocs.org/projects/esu/badge/?version=latest)](https://esu.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/esu/badge/?version=latest)](https://esu.readthedocs.io/en/latest/)
 [![PyPI](https://img.shields.io/pypi/v/esu.svg?color=blue)](https://pypi.org/project/esu/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/esu.svg)](https://github.com/torokmark/esu)
 [![PyPI - License](https://img.shields.io/github/license/torokmark/esu)](https://github.com/torokmark/esu/blob/master/LICENSE.md)
