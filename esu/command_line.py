@@ -1,17 +1,19 @@
 from esu import Struct
 
 def main():
-    Dog = Struct('Dog', 
-                 'name', 'age', 
-                 methods={
-                     'say': lambda self: print("Hello {}".format(self.__dict__['name']))
-                })
+    Dog = Struct(
+            'Dog', 
+            'name', 'age', 
+            methods={
+                'say': lambda self: print("Hello {}".format(self.__dict__['name']))
+            })
 
     d = Dog()
     d.name = 'rex'
     d.age = 54
     d.say()
-
+    print(d.members())
+    
     d2 = Dog()
     d2.name = 'Wolfie'
     d2.age = 22 

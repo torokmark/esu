@@ -24,16 +24,20 @@ pip install esu
 ```py
 from esu import Struct
 
-Dog = Struct('Dog', 
-             'name', 'age', 
-             methods={
-                 'say': lambda self: print("Hello {}".format(self.__dict__['name']))
+Customer = Struct(
+            'Customer', 
+            'name', 'age', 
+            methods={
+                'greeting': lambda self: "Hello {}".format(self.__dict__['name'])
             })
 
-d = Dog()
-d.name = 'Rex'
-d.age = 5
-d.say() # => Hello Rex
+dave = Customer()
+dave.name = 'Dave'
+dave.age = 25
+dave.greeting() # => Hello Dave 
+
+anna = Customer('Anna', 28)
+anna.greeting() # => Hello Anna
 ```
 
 ### Documentation

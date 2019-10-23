@@ -73,3 +73,22 @@ def test_method_struct_defined_method():
     dog.age = 12
     assert dog.say() == 'rex'
 
+def test_init_struct_use_arguments():
+    Dog = Struct('Dog', 'name', 'age')
+    dog = Dog('Rex', 12)
+    assert dog.name == 'Rex' and dog.age == 12
+
+def test_members_struct_returns_field_names():
+    Dog = Struct('Dog', 'name', 'age')
+    dog = Dog()
+    assert dog.members() == ('name', 'age')
+
+def test_values_struct_returns_values_tuple():
+    Dog = Struct('Dog', 'name', 'age')
+    dog = Dog('Rex', 12)
+    assert dog.values() == ('Rex', 12)
+
+def test_len_struct_returns_size_of_fields():
+    Dog = Struct('Dog', 'name', 'age')
+    dog = Dog('Rex', 12)
+    assert len(dog) == 2
