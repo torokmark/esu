@@ -1,0 +1,9 @@
+language: python
+python:
+  - '3.7'
+
+jobs:
+  include:
+    - stage: 'Tests'
+      name: 'pytests'
+      script: ./test.sh 

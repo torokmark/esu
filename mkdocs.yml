@@ -1,0 +1,12 @@
+site_name: ESU
+nav:
+  - Home: index.md
+  - Struct: struct.md
+
+theme: readthedocs
+
+markdown_extensions:
+    - toc:
+          permalink: "#"
+
+collapse_navigation: true
