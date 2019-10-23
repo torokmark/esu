@@ -1,3 +1,4 @@
+import pytest
 from esu import Struct
 
 def test_field_struct_declared_field_is_none():
@@ -77,6 +78,11 @@ def test_init_struct_use_arguments():
     Dog = Struct('Dog', 'name', 'age')
     dog = Dog('Rex', 12)
     assert dog.name == 'Rex' and dog.age == 12
+
+def test_init_struct_raises_error_if_less_values():
+    Dog = Struct('Dog', 'name', 'age')
+    with pytest.raises(ValueError):
+        dog = Dog('Rex')
 
 def test_members_struct_returns_field_names():
     Dog = Struct('Dog', 'name', 'age')

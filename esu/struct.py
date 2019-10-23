@@ -4,15 +4,12 @@ class Struct:
     def __new__(self, cls, *fields, methods={}):
         NewType = type(cls, (object,), {field : None for field in fields})
 
-        class ArgumentError(ValueError):
-            pass
-
         def __init__(c, *values):
             if len(values) == len(fields):
                 for idx in range(len(fields)):
                     c.__dict__[fields[idx]] = values[idx]
             elif len(values) != 0:
-                raise ArgumentError('Not enough arguments passed')
+                raise ValueError('Not enough arguments passed')
         setattr(NewType, '__init__', __init__)
 
         def __eq__(c, obj):

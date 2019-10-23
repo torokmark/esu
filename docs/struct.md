@@ -8,6 +8,19 @@ Struct(self, cls, *fields, methods={})
 
 Name of the created type.
 
+## __init__
+
+Option `values` argument for passing values to fields in the same order.
+If number of values differs from number of fields, `ValueError` exception is 
+raised.
+
+```py
+Dog = Struct('Dog', 'name', 'age')
+rex = Dog()
+...
+caesar = Dog('caesar', 5)
+```
+
 ## Fields
 
 List of fields that would be available on the instance.
@@ -55,8 +68,35 @@ String representation of an instance is based on the its fields and values.
 
 If `__str__` is passed via `methods`, it overwrites the default one.
 
+## len
 
+Returns the number of fields.
 
+```py
+Dog = Struct('Dog', 'name', 'age')
+rex = Dog('Rex', 3)
+len(rex) # => 2
+```
+
+## members
+
+Returns the tuple of field names in the same order as they are specified.
+
+```py
+Dog = Struct('Dog', 'name', 'age')
+rex = Dog('Rex', 3)
+rex.members() # => ('name', 'age')
+```
+
+## values
+
+Returns the tuple of values assigned to fields.
+
+```py
+Dog = Struct('Dog', 'name', 'age')
+rex = Dog('Rex', 3)
+rex.values() # => ('Rex', 3)
+```
 
 
 
