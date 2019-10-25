@@ -2,7 +2,8 @@ language: python
 
 jobs:
   include:
-    - python: 2.7
+    - python: 3.0
+    - python: 3.1
     - python: 3.5
     - python: 3.7
 script: ./test.sh 
