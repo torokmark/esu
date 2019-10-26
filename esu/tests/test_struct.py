@@ -98,3 +98,13 @@ def test_len_struct_returns_size_of_fields():
     Dog = Struct('Dog', 'name', 'age')
     dog = Dog('Rex', 12)
     assert len(dog) == 2
+
+def test_to_dict_struct_returns_dict_of_fields_and_values():
+    Dog = Struct('Dog', 'name', 'age')
+    dog = Dog('Rex', 12)
+    assert dog.to_dict() == {'name': 'Rex', 'age': 12}
+
+
+
+
+

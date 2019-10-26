@@ -1,4 +1,4 @@
-from esu import Struct
+from esu import Struct, OpenStruct
 
 def main():
     Dog = Struct(
@@ -31,6 +31,13 @@ def main():
     h[d2] = 2
     h[d3] = 3
     print(len(h))
+
+    o = OpenStruct()
+    o.dog_name = 'Rex'
+    print(o.dog_name)
+
+    b = OpenStruct({'age':12})
+    print(b.age)
 
 
 if __name__ == "__main__":

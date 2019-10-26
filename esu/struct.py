@@ -43,6 +43,13 @@ class Struct:
             return len(fields)
         setattr(NewType, '__len__', __len__)
 
+        def to_dict(c):
+            _dict = {}
+            for field in fields:
+                _dict[field] = c.__dict__[field]
+            return _dict
+        setattr(NewType, 'to_dict', to_dict)
+
         for method_name, method in methods.items():
             setattr(NewType, method_name, method)
         
