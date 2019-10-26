@@ -3,7 +3,12 @@ language: python
 jobs:
   include:
     - python: 3.5
-    - python: 3.6
-    - python: 3.7
-    - python: 3.8
-script: ./test.sh 
+    - python: 
+      - 3.6
+      - 3.7
+      - 3.8
+      install: pip install black
+      script: black esu
+
+install: pip install -r requirements.txt
+script: ./test.sh
