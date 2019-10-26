@@ -8,7 +8,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="esu",
-    version="3.0.0",
+    version="3.0.2",
     description="Enjoy the flexibility of structs with esu!",
     long_description=long_description,
     long_description_content_type="text/markdown",
