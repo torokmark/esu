@@ -48,10 +48,11 @@ anna.greeting() # => Hello Anna
 bob = OpenStruct()
 bob.name = Bob
 bob.age = 54
-print(str(bob)) # => [name=Bob, age=54]
+print(bob) # => [name=Bob, age=54]
 
 su = OpenStruct({'name': 'Su', 'gender': 'female'})
 su.employed = True
+print(su) # => [name=Su, gender=female, employed=True]
 ```
 
 ### Documentation

@@ -21,8 +21,10 @@ pip install esu
 
 ### Usage
 
+#### Struct
+
 ```py
-from esu import Struct
+from esu import Struct, OpenStruct
 
 Customer = Struct(
             'Customer', 
@@ -38,6 +40,19 @@ dave.greeting() # => Hello Dave
 
 anna = Customer('Anna', 28)
 anna.greeting() # => Hello Anna
+```
+
+#### OpenStruct
+
+```py
+bob = OpenStruct()
+bob.name = Bob
+bob.age = 54
+print(bob) # => [name=Bob, age=54]
+
+su = OpenStruct({'name': 'Su', 'gender': 'female'})
+su.employed = True
+print(su) # => [name=Su, gender=female, employed=True]
 ```
 
 ### Documentation

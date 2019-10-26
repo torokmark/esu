@@ -2,6 +2,7 @@ site_name: ESU
 nav:
   - Home: index.md
   - Struct: struct.md
+  - OpenStruct: open_struct.md
 
 theme: readthedocs
 

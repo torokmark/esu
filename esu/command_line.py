@@ -35,6 +35,7 @@ def main():
     o = OpenStruct()
     o.dog_name = 'Rex'
     print(o.dog_name)
+    print(o)
 
     b = OpenStruct({'age':12})
     print(b.age)
