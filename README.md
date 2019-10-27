@@ -1,4 +1,4 @@
-# Welcome to Esu Struct!
+# Welcome to Esu Structs!
 
 
 [![Build Status](https://travis-ci.org/torokmark/esu.svg?branch=master)](https://travis-ci.org/torokmark/esu)
@@ -24,7 +24,7 @@ pip install esu
 #### Struct
 
 ```py
-from esu import Struct, OpenStruct
+from esu import Struct
 
 Customer = Struct(
             'Customer', 
@@ -45,6 +45,8 @@ anna.greeting() # => Hello Anna
 #### OpenStruct
 
 ```py
+from esu import OpenStruct
+
 bob = OpenStruct()
 bob.name = Bob
 bob.age = 54
